@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://uik6o4rffjtp"]
+
+[ext_resource type="Script" path="res://tscn/scripts/pointmesh.gd" id="1_nutv8"]
+
+[node name="Pointmesh" type="Polygon2D"]
+polygon = PackedVector2Array(1, 0, 0, 1, -1, 0, 0, -1)
+script = ExtResource("1_nutv8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

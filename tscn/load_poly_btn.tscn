@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://88u18hdhqoj"]
+
+[ext_resource type="Script" path="res://tscn/scripts/load_poly_btn.gd" id="1_pgfpv"]
+
+[node name="LoadPolyBtn" type="Button"]
+custom_minimum_size = Vector2(32, 32)
+script = ExtResource("1_pgfpv")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(16, 16)
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

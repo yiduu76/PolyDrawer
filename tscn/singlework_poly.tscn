@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxghuu55fqnsg"]
+
+[ext_resource type="Script" path="res://tscn/scripts/my_poly.gd" id="1_d2rru"]
+
+[node name="SingleworkPoly" type="Polygon2D"]
+color = Color(0.847059, 0.686275, 0.941176, 1)
+invert_border = 50.0
+polygon = PackedVector2Array(0, -24, -16, 8, 16, 8)
+script = ExtResource("1_d2rru")
